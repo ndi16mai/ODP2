@@ -9,6 +9,10 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.Float?>
 <BorderPane fx:controller="se.hig.odp2.mp2.gui.controllers.AddCourseController"
             xmlns:fx="http://javafx.com/fxml">
     <center>
@@ -18,7 +22,14 @@
             <Label text="Course code"></Label>
             <TextField fx:id="code"></TextField>
             <Label text="HP"></Label>
-            <TextField fx:id="points" ></TextField>
+            <ChoiceBox fx:id="points">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <Float fx:value="7.5"/>
+                        <Float fx:value="15"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
             <Button text="Add" onAction="#addCourse"></Button>
         </VBox>
     </center>

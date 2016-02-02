@@ -50,22 +50,29 @@ public class MainController {
     }
 
     @FXML
-    protected void getCourses()
+    protected void getCourses() throws IOException
     {
-        System.out.println("Controller.getCourses");
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("gui/layout/CourseView.fxml"));
+        Parent parent = (Parent) fxmlLoader.load();
+
+
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("add Course");
+        stage.setScene(new Scene(parent));
+        stage.show();
     }
 
     @FXML
     protected void addCourse() throws IOException
     {
-        FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("gui/layout/AddCourseLayout.fxml"));
-        Parent parent = (Parent) fxmlLoader2.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("gui/layout/AddCourseLayout.fxml"));
+        Parent parent = (Parent) fxmlLoader.load();
 
 
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-//        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setTitle("ABC");
+        stage.setTitle("add Course");
         stage.setScene(new Scene(parent));
         stage.show();
     }
