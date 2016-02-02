@@ -11,13 +11,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import se.hig.odp2.mp2.Main;
 import se.hig.odp2.mp2.course.CourseRegister;
 
 import java.io.IOException;
 
 public class MainController {
-
-    private Parent addCourseLayout;
 
     private CourseRegister courseRegister;
 
@@ -59,17 +58,16 @@ public class MainController {
     @FXML
     protected void addCourse() throws IOException
     {
+        FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("gui/layout/AddCourseLayout.fxml"));
+        Parent parent = (Parent) fxmlLoader2.load();
+
 
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
 //        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("ABC");
-        stage.setScene(new Scene(addCourseLayout));
+        stage.setScene(new Scene(parent));
         stage.show();
     }
 
-    public void setAddCourseLayout(Parent addCourseLayout)
-    {
-        this.addCourseLayout = addCourseLayout;
-    }
 }

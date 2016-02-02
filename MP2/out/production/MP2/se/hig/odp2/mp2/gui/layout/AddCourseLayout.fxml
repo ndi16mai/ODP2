@@ -18,7 +18,7 @@
             <Label text="Course code"></Label>
             <TextField fx:id="code"></TextField>
             <Label text="HP"></Label>
-            <TextField fx:id="points"></TextField>
+            <TextField fx:id="points" ></TextField>
             <Button text="Add" onAction="#addCourse"></Button>
         </VBox>
     </center>
