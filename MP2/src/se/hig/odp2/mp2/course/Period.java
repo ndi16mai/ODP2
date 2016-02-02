@@ -1,4 +1,4 @@
-package se.hig.odp2.mp2;
+package se.hig.odp2.mp2.course;
 
 public class Period
 {

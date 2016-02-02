@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<BorderPane fx:controller="se.hig.odp2.mp2.gui.Controller"
+<BorderPane fx:controller="se.hig.odp2.mp2.gui.controllers.MainController"
             xmlns:fx="http://javafx.com/fxml">
     <center>
         <TabPane>
@@ -22,6 +22,9 @@
                         <Button text="Register Student" onAction="#registerStudent"></Button>
                         <Button text="Unregister Student" onAction="#unregisterStudent"></Button>
                         <Button text="Get Courses" onAction="#getCourses"></Button>
+                    </HBox>
+                    <HBox>
+                        <Button text="Add Course" onAction="#addCourse"></Button>
                     </HBox>
                 </VBox>
             </Tab>

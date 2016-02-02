@@ -5,15 +5,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import se.hig.odp2.mp2.gui.controllers.MainController;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/layout/MainLayout.fxml"));
+
+        Parent root = fxmlLoader.load();
         primaryStage.setTitle("MP2");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+
+        MainController controller = fxmlLoader.<MainController>getController();
+
+        final FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("gui/layout/AddCourseLayout.fxml"));
+        controller.setAddCourseLayout((Parent) fxmlLoader2.load());
     }
 
 
