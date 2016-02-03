@@ -18,5 +18,23 @@ public class CourseOccasion
         this.speed = speed;
     }
 
+	public List<CourseCommitment> getCommitments() {
+		return commitments;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public Period getStartPeriod() {
+		return startPeriod;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+    
+    
+
 
 }

@@ -1,7 +1,7 @@
 package se.hig.odp2.mp2.course;
 
-import se.hig.odp2.mp2.roles.Person;
-import se.hig.odp2.mp2.roles.Role;
+import se.hig.odp2.mp2.model.Person;
+import se.hig.odp2.mp2.model.Role;
 
 public class CourseCommitment
 {
@@ -23,4 +23,5 @@ public class CourseCommitment
     {
         return role;
     }
+    
 }
