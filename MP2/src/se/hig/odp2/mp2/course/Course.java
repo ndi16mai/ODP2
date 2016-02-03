@@ -16,4 +16,10 @@ public class Course
         this.courseCode = courseCode;
         this.points = points;
     }
+
+    @Override
+    public String toString()
+    {
+        return courseCode + ": " +name;
+    }
 }

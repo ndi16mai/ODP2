@@ -8,6 +8,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import se.hig.odp2.mp2.course.Course;
+import se.hig.odp2.mp2.course.CourseRegister;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,6 +21,8 @@ public class AddCourseController implements Initializable
     @FXML
     private ChoiceBox<Float> points;
 
+    private CourseRegister courseRegister;
+
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
@@ -28,10 +32,15 @@ public class AddCourseController implements Initializable
     @FXML
     protected void addCourse(ActionEvent event)
     {
-        
+        courseRegister.addCourse(new Course(name.getText(), code.getText(), points.getValue()));
 
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
+    }
+
+    public void setCourseRegister(CourseRegister courseRegister)
+    {
+        this.courseRegister = courseRegister;
     }
 }
