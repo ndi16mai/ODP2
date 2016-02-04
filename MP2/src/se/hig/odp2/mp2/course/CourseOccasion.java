@@ -33,6 +33,12 @@ public class CourseOccasion
 	public int getSpeed() {
 		return speed;
 	}
+
+	@Override
+	public String toString()
+	{
+		return startPeriod + " Speed: " + speed + "%";
+	}
     
     
 

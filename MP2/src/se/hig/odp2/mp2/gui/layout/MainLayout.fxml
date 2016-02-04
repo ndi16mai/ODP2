@@ -13,32 +13,18 @@
     <center>
         <TabPane>
             <Tab text="Clerk" closable="false">
-                <VBox>
-                    <HBox>
+                <HBox>
                         <Button text="Create Course Instance" onAction="#createCourseInstance"></Button>
-                        <Button text="Edit Course Instance" onAction="#editCourseInstance"></Button>
-                    </HBox>
-                    <HBox>
-                        <Button text="Register Student" onAction="#registerStudent"></Button>
-                        <Button text="Unregister Student" onAction="#unregisterStudent"></Button>
                         <Button text="Get Courses" onAction="#getCourses"></Button>
-                    </HBox>
-                    <HBox>
                         <Button text="Add Course" onAction="#addCourse"></Button>
-                    </HBox>
-                </VBox>
+                </HBox>
             </Tab>
             <Tab text="Student" closable="false">
                 <HBox>
-                    <Button text="Register Student" onAction="#registerStudent"></Button>
-                    <Button text="Unregister Student" onAction="#unregisterStudent"></Button>
                     <Button text="Get Courses" onAction="#getCourses"></Button>
                 </HBox>
             </Tab>
-            <Tab text="Teacher" closable="false">
-                <Button text="Get Courses" onAction="#getCourses"></Button>
-            </Tab>
-            <Tab text="Examinator" closable="false">
+            <Tab text="Teacher/Examinator" closable="false">
                 <Button text="Get Courses" onAction="#getCourses"></Button>
             </Tab>
         </TabPane>

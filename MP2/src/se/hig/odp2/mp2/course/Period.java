@@ -19,4 +19,9 @@ public class Period
     {
         return period;
     }
+
+    @Override
+    public String toString() {
+        return "Year: " + year + " Period: " + period;
+    }
 }

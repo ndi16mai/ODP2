@@ -40,23 +40,6 @@ public class MainController {
         stage.show();
     }
 
-    @FXML
-    protected void editCourseInstance()
-    {
-        System.out.println("Controller.editCourseInstance");
-    }
-
-    @FXML
-    protected void registerStudent()
-    {
-        System.out.println("Controller.registerStudent");
-    }
-
-    @FXML
-    protected void unregisterStudent()
-    {
-        System.out.println("Controller.unregisterStudent");
-    }
 
     @FXML
     protected void getCourses() throws IOException
