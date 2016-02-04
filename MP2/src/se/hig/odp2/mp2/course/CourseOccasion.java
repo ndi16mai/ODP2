@@ -18,6 +18,11 @@ public class CourseOccasion
         this.speed = speed;
     }
 
+	public void commitPerson(CourseCommitment courseCommitment)
+	{
+		commitments.add(courseCommitment);
+	}
+
 	public List<CourseCommitment> getCommitments() {
 		return commitments;
 	}

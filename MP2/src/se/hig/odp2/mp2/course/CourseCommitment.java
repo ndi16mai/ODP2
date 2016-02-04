@@ -23,5 +23,10 @@ public class CourseCommitment
     {
         return role;
     }
-    
+
+    @Override
+    public String toString()
+    {
+        return person + " as " + role;
+    }
 }

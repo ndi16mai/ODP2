@@ -4,12 +4,12 @@ import java.util.List;
 
 public class Person
 {
-    private String firstName, LastName;
+    private String firstName, lastName;
 
 	public Person(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
@@ -17,7 +17,12 @@ public class Person
 	}
 
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
-    
+
+	@Override
+	public String toString()
+	{
+		return firstName + " " + lastName;
+	}
 }

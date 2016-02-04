@@ -42,8 +42,8 @@ public class CourseViewController
 
         CommitPersonController controller = fxmlLoader.getController();
         controller.setCourseOccasion(courseOccasion);
+        controller.setCourseCommitments(commitmentList.getItems());
 
-        ObservableList<CourseCommitment> courseCommitments commitmentList.getItems();
 
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -59,13 +59,28 @@ public class CourseViewController
         this.courseRegister = courseRegister;
         courseList.setItems(courseRegister);
 
-        courseList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
-            @Override
-            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-                Course course = (Course) newValue;
-                ObservableList<CourseOccasion> courseOccasions = FXCollections.observableArrayList(course.getCourseOccasions());
-                courseOccasionList.setItems(courseOccasions);
+        courseOccasionList.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
+            CourseOccasion courseOccasion = (CourseOccasion)newValue;
+            if(courseOccasion != null)
+            {
+                ObservableList<CourseCommitment> courseCommitments = FXCollections.observableArrayList(courseOccasion.getCommitments());
+                commitmentList.setItems(courseCommitments);
             }
         });
+
+        courseList.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
+            Course course = (Course) newValue;
+            ObservableList<CourseOccasion> courseOccasions = FXCollections.observableArrayList(course.getCourseOccasions());
+            courseOccasionList.setItems(courseOccasions);
+                if(!courseOccasionList.getSelectionModel().isEmpty())
+                    courseOccasionList.getSelectionModel().selectFirst();
+                else
+                    commitmentList.setItems(null);
+        });
+
+        courseList.getSelectionModel().selectFirst();
+
+        if(!courseOccasionList.getSelectionModel().isEmpty())
+            courseOccasionList.getSelectionModel().selectFirst();
     }
 }
