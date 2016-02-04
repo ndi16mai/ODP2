@@ -1,15 +1,14 @@
 package se.hig.odp2.mp2.gui.controllers;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import se.hig.odp2.mp2.course.Course;
-import se.hig.odp2.mp2.course.CourseRegister;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +20,7 @@ public class AddCourseController implements Initializable
     @FXML
     private ChoiceBox<Float> points;
 
-    private CourseRegister courseRegister;
+    private ObservableList<Course> courseRegister;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -32,14 +31,14 @@ public class AddCourseController implements Initializable
     @FXML
     protected void addCourse(ActionEvent event)
     {
-        courseRegister.addCourse(new Course(name.getText(), code.getText(), points.getValue()));
+        courseRegister.add(new Course(name.getText(), code.getText(), points.getValue()));
 
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
     }
 
-    public void setCourseRegister(CourseRegister courseRegister)
+    public void setCourseRegister(ObservableList<Course> courseRegister)
     {
         this.courseRegister = courseRegister;
     }

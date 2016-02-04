@@ -20,7 +20,15 @@ public class Course
     @Override
     public String toString()
     {
-        return courseCode + ": " +name;
+        return courseCode + ": " +name + " " + points;
     }
 
+    public void addCourseOccasion(CourseOccasion courseOccasion)
+    {
+        courseOccasions.add(courseOccasion);
+    }
+
+    public List<CourseOccasion> getCourseOccasions() {
+        return courseOccasions;
+    }
 }

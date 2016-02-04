@@ -7,8 +7,25 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="se.hig.odp2.mp2.gui.controllers.CourseViewController">
     <center>
-        <ListView fx:id="courseList">
+        <HBox>
+            <VBox>
+                <Label text="Courses"></Label>
+                <ListView fx:id="courseList" ></ListView>
+            </VBox>
+            <VBox>
+                <Label text="Occasions"></Label>
+                <ListView fx:id="courseOccasionList"></ListView>
+            </VBox>
+            <VBox>
+                <Label text="Occasion"></Label>
+                <Label text="Period"></Label>
+                <Label fx:id="period"></Label>
+                <Label text="Speed"></Label>
+                <Label fx:id="speed"></Label>
+                <Label text="Commitments"></Label>
+                <ListView fx:id="commitmentList"></ListView>
+            </VBox>
+        </HBox>
 
-        </ListView>
     </center>
 </BorderPane>
