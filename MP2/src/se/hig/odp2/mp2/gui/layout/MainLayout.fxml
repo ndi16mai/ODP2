@@ -1,0 +1,32 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:controller="se.hig.odp2.mp2.gui.controllers.MainController"
+            xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <TabPane>
+            <Tab text="Clerk" closable="false">
+                <HBox>
+                        <Button text="Create Course Instance" onAction="#createCourseInstance"></Button>
+                        <Button text="Get Courses" onAction="#getCourses"></Button>
+                        <Button text="Add Course" onAction="#addCourse"></Button>
+                </HBox>
+            </Tab>
+            <Tab text="Student" closable="false">
+                <HBox>
+                    <Button text="Get Courses" onAction="#getCourses"></Button>
+                </HBox>
+            </Tab>
+            <Tab text="Teacher/Examinator" closable="false">
+                <Button text="Get Courses" onAction="#getCourses"></Button>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane >

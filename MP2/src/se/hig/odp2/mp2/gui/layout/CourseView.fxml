@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="se.hig.odp2.mp2.gui.controllers.CourseViewController">
+    <center>
+        <HBox>
+            <VBox>
+                <Label text="Courses"></Label>
+                <ListView fx:id="courseList" ></ListView>
+            </VBox>
+            <VBox>
+                <Label text="Occasions"></Label>
+                <ListView fx:id="courseOccasionList"></ListView>
+            </VBox>
+            <VBox>
+                <Label text="Commitments"></Label>
+                <ListView fx:id="commitmentList"></ListView>
+                <Button text="Add person" onAction="#addPerson"></Button>
+            </VBox>
+        </HBox>
+
+    </center>
+</BorderPane>
