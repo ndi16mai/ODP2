@@ -8,5 +8,5 @@ import factories.TextElementFactory;
  */
 public interface TextDocument extends Document{
     void print();
-    void addElement(Element element);
+    void add(Element element);
 }

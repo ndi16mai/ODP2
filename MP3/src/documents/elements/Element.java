@@ -8,5 +8,5 @@ import documents.visitors.DocumentVisitor;
 public interface Element {
     void accept(DocumentVisitor visitor);
     String getText();
-    void addElement(Element element);
+    void add(Element element);
 }

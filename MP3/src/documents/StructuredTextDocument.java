@@ -16,7 +16,7 @@ public class StructuredTextDocument implements TextDocument{
         elementList = new ArrayList<Element>();
     }
 
-    public void addElement(Element element)
+    public void add(Element element)
     {
         elementList.add(element);
     }

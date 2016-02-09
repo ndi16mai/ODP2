@@ -10,7 +10,7 @@ public interface TextElementFactory {
     Header createHeader(String text);
     Paragraph createParagraph(String text);
     BulletList createBulletList();
-    Table createTable();
+    Table createTable(int column, int row);
 
 
 }

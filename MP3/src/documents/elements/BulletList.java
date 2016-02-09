@@ -19,7 +19,7 @@ public class BulletList implements Element{
     {
         list.add(text);
     }
-    
+
     @Override
     public void accept(DocumentVisitor visitor) {
         visitor.visit(this);
@@ -32,7 +32,7 @@ public class BulletList implements Element{
     }
 
     @Override
-    public void addElement(Element element)
+    public void add(Element element)
     {
 
     }

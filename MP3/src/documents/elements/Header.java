@@ -18,7 +18,7 @@ public class Header implements Element{
     }
 
     @Override
-    public void addElement(Element element)
+    public void add(Element element)
     {
 
     }
