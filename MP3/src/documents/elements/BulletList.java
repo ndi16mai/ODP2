@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * Created by Selma on 2016-02-09.
  */
-public class BulletList implements Element{
+public abstract class BulletList implements Element{
 
-    private List<String> list;
+    protected List<String> list;
 
     public BulletList(List<String> list) {
         this.list = list;
@@ -23,12 +23,6 @@ public class BulletList implements Element{
     @Override
     public void accept(DocumentVisitor visitor) {
         visitor.visit(this);
-    }
-
-    @Override
-    public String getText()
-    {
-        return null;
     }
 
     @Override

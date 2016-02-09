@@ -5,16 +5,10 @@ import documents.visitors.DocumentVisitor;
 /**
  * Created by Selma on 2016-02-09.
  */
-public class Paragraph implements Element {
+public abstract class Paragraph implements Element {
     @Override
     public void accept(DocumentVisitor visitor) {
         visitor.visit(this);
-    }
-
-    @Override
-    public String getText()
-    {
-        return null;
     }
 
     @Override

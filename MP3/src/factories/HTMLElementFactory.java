@@ -1,9 +1,7 @@
 package factories;
 
-import documents.elements.BulletList;
-import documents.elements.Header;
-import documents.elements.Paragraph;
-import documents.elements.Table;
+import documents.elements.*;
+import documents.elements.html.HTMLHeader;
 
 /**
  * Created by Selma on 2016-02-09.
@@ -11,7 +9,7 @@ import documents.elements.Table;
 public class HTMLElementFactory implements TextElementFactory {
     @Override
     public Header createHeader(String text) {
-        return null;
+        return new HTMLHeader(text);
     }
 
     @Override
@@ -25,7 +23,8 @@ public class HTMLElementFactory implements TextElementFactory {
     }
 
     @Override
-    public Table createTable() {
+    public Table createTable(int column, int row) {
         return null;
     }
+
 }

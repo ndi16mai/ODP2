@@ -25,7 +25,8 @@ public class LaTeXElementFactory implements TextElementFactory {
     }
 
     @Override
-    public Table createTable() {
+    public Table createTable(int column, int row) {
         return null;
     }
+
 }

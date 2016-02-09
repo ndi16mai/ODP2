@@ -14,7 +14,7 @@ import factories.TextElementFactory;
 public class Main {
 
     public static void main(String args[]){
-
+        new Main().testRun();
     }
 
     public void testRun()
@@ -33,7 +33,7 @@ public class Main {
     }
     public void buildDocument(TextDocument doc, TextElementFactory factory)
     { // jfr Builder
-        doc.add(factory.createHeader(("Uppdraget"));
+        doc.add(factory.createHeader(("Uppdraget")));
         doc.add(factory.createParagraph("Det h¨ar miniprojektet ..."));
         doc.add(factory.createHeader("Lista ¨over viktiga saker"));
         BulletList list = factory.createBulletList();
