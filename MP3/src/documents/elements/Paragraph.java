@@ -18,11 +18,6 @@ public class Paragraph implements Element {
         visitor.visit(this);
     }
 
-    @Override
-    public void add(Element element)
-    {
-
-    }
 
     @Override
     public String getText() {

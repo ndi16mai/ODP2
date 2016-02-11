@@ -24,8 +24,4 @@ public class Table implements Element{
         return null;
     }
 
-    @Override
-    public void add(Element element) {
-
-    }
 }

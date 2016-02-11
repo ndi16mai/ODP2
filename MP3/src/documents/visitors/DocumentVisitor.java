@@ -2,6 +2,7 @@ package documents.visitors;
 
 import documents.builders.TextDocumentBuilder;
 import documents.elements.*;
+import documents.elements.items.ListItem;
 
 /**
  * Created by Selma on 2016-02-09.
@@ -21,6 +22,16 @@ public class DocumentVisitor {
     public void visit(Paragraph paragraph)
     {
        builder.buildElement(paragraph);
+    }
+
+    public void visit(BulletList bulletList)
+    {
+        builder.buildElement(bulletList);
+    }
+
+    public void visit(ListItem listItem)
+    {
+        builder.buildElement(listItem);
     }
 
     public TextDocumentBuilder getBuilder() {

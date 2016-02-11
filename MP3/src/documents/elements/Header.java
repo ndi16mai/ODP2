@@ -23,9 +23,4 @@ public class Header implements Element{
         return text;
     }
 
-    @Override
-    public void add(Element element)
-    {
-
-    }
 }

@@ -1,7 +1,9 @@
 package documents.builders;
 
 import documents.TextDocument;
+import documents.elements.BulletList;
 import documents.elements.Header;
+import documents.elements.items.ListItem;
 import documents.elements.Paragraph;
 
 /**
@@ -9,9 +11,11 @@ import documents.elements.Paragraph;
  */
 public interface TextDocumentBuilder {
 
-    String preamble();
-    String postamble();
-    String buildElement(Header header);
-    String buildElement(Paragraph paragraph);
+    void preamble();
+    void postamble();
+    void buildElement(Header header);
+    void buildElement(Paragraph paragraph);
+    void buildElement(BulletList bulletList);
+    void buildElement(ListItem listItem);
     TextDocument getDocument();
 }

@@ -9,28 +9,29 @@ import documents.elements.Paragraph;
  */
 public class PlainTextBuilder implements TextDocumentBuilder {
 
+    private TextDocument textDocument = new TextDocument();
+
     @Override
-    public String preamble() {
-        return null;
+    public void preamble() {
+
     }
 
     @Override
-    public String postamble() {
-        return null;
+    public void postamble() {
     }
 
     @Override
-    public String buildElement(Header header) {
-        return header.getText() + "\n";
+    public void buildElement(Header header) {
+        textDocument.add(header.getText() + "\n");
     }
 
     @Override
-    public String buildElement(Paragraph paragraph) {
-        return paragraph.getText() + "\n";
+    public void buildElement(Paragraph paragraph) {
+        textDocument.add(paragraph.getText() + "\n");
     }
 
     @Override
     public TextDocument getDocument() {
-        return null;
+        return textDocument;
     }
 }

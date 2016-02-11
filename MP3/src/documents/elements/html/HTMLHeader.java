@@ -5,11 +5,10 @@ import documents.elements.Header;
 /**
  * Created by Selma on 2016-02-09.
  */
-public class HTMLHeader extends Header {
+public class HTMLHeader {
     private String text;
 
 
-    @Override
     public String getText() {
         return "<h1> " + text + "</h1>" ;
     }

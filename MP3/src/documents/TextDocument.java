@@ -8,8 +8,9 @@ import documents.elements.Element;
 public class TextDocument implements Document{
     private String text;
 
-    public TextDocument(String text) {
-        this.text = text;
+    public void add(String text)
+    {
+        this.text += text;
     }
 
     @Override

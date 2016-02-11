@@ -2,9 +2,7 @@ import documents.builders.PlainTextBuilder;
 import documents.builders.TextDocumentParser;
 import documents.builders.TextDocumentBuilder;
 import documents.TextDocument;
-import documents.elements.BulletList;
-import documents.elements.Element;
-import documents.elements.Table;
+import documents.elements.*;
 import documents.visitors.DocumentVisitor;
 
 import java.util.ArrayList;
@@ -22,11 +20,17 @@ public class Main {
     public void testRun()
     {
         List<Element> list = new ArrayList<Element>();
+
+        list.add(new Header("Snowhite & the seven dwarves"));
+        list.add(new Paragraph("Once upon a time, there was a black lady"));
+
         PlainTextBuilder builder = new PlainTextBuilder();
         DocumentVisitor visitor = new DocumentVisitor(builder);
         TextDocumentParser textDocumentParser = new TextDocumentParser(visitor);
 
-        textDocumentParser.parse(list).print();
+        TextDocument textDocument = textDocumentParser.parse(list);
+
+        textDocument.print();
 
     }
 
