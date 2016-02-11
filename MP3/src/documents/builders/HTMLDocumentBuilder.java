@@ -7,10 +7,9 @@ import documents.elements.Paragraph;
 import documents.elements.items.ListItem;
 
 /**
- * Created by Selma on 2016-02-10.
+ * Created by Selma on 2016-02-11.
  */
-public class PlainTextBuilder implements TextDocumentBuilder {
-
+public class HTMLDocumentBuilder implements TextDocumentBuilder{
     private TextDocument textDocument = new TextDocument();
 
     @Override
@@ -19,19 +18,18 @@ public class PlainTextBuilder implements TextDocumentBuilder {
     }
 
     @Override
-    public void postamble()
-    {
+    public void postamble() {
 
     }
 
     @Override
     public void buildElement(Header header) {
-        textDocument.add(header.getText() + "\n");
+        textDocument.add("<h1> " + header.getText() + "</h1>");
     }
 
     @Override
     public void buildElement(Paragraph paragraph) {
-        textDocument.add(paragraph.getText() + "\n");
+        textDocument.add("<p>" + paragraph.getText() + "</p>");
     }
 
     @Override
@@ -46,6 +44,6 @@ public class PlainTextBuilder implements TextDocumentBuilder {
 
     @Override
     public TextDocument getDocument() {
-        return textDocument;
+        return null;
     }
 }
