@@ -5,7 +5,14 @@ import documents.visitors.DocumentVisitor;
 /**
  * Created by Selma on 2016-02-09.
  */
-public abstract class Paragraph implements Element {
+public class Paragraph implements Element {
+
+    private String text;
+
+    public Paragraph(String text) {
+        this.text = text;
+    }
+
     @Override
     public void accept(DocumentVisitor visitor) {
         visitor.visit(this);
@@ -15,5 +22,10 @@ public abstract class Paragraph implements Element {
     public void add(Element element)
     {
 
+    }
+
+    @Override
+    public String getText() {
+        return text;
     }
 }

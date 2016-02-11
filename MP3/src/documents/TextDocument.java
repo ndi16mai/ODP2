@@ -1,12 +1,20 @@
 package documents;
 
 import documents.elements.Element;
-import factories.TextElementFactory;
 
 /**
  * Created by Selma on 2016-02-09.
  */
-public interface TextDocument extends Document{
-    void print();
-    void add(Element element);
+public class TextDocument implements Document{
+    private String text;
+
+    public TextDocument(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public void print()
+    {
+        System.out.println(text);
+    }
 }

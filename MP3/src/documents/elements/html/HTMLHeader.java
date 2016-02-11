@@ -8,9 +8,6 @@ import documents.elements.Header;
 public class HTMLHeader extends Header {
     private String text;
 
-    public HTMLHeader(String text) {
-        this.text = text;
-    }
 
     @Override
     public String getText() {
