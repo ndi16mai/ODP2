@@ -1,8 +1,5 @@
-package documents.elements;
+package documents.elements.base;
 
-import documents.visitors.DocumentVisitor;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,5 +14,10 @@ public abstract class CompositeElement<T> implements Element {
 
     public void add(T element) {
         elementList.add(element);
+    }
+
+    public List<T> getList()
+    {
+        return elementList;
     }
 }

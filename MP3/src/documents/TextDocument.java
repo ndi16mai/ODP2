@@ -1,12 +1,10 @@
 package documents;
 
-import documents.elements.Element;
-
 /**
  * Created by Selma on 2016-02-09.
  */
 public class TextDocument implements Document{
-    private String text;
+    private String text ="";
 
     public void add(String text)
     {

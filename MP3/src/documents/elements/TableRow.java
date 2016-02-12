@@ -1,26 +1,23 @@
 package documents.elements;
 
 import documents.elements.base.CompositeElement;
-import documents.elements.base.Element;
 import documents.visitors.DocumentVisitor;
 
 import java.util.List;
 
 /**
- * Created by Selma on 2016-02-09.
+ * Created by Wareus on 2016-02-12.
  */
-public class Table extends CompositeElement<TableRow>
+public class TableRow extends CompositeElement<TableData>
 {
-
-    public Table(List<TableRow> elementList)
+    public TableRow(List<TableData> elementList)
     {
         super(elementList);
     }
 
     @Override
-    public void accept(DocumentVisitor visitor) {
+    public void accept(DocumentVisitor visitor)
+    {
         visitor.visit(this);
     }
-
-
 }

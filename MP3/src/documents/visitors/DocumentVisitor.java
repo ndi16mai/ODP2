@@ -2,7 +2,7 @@ package documents.visitors;
 
 import documents.builders.TextDocumentBuilder;
 import documents.elements.*;
-import documents.elements.items.ListItem;
+import documents.elements.ListItem;
 
 /**
  * Created by Selma on 2016-02-09.
@@ -27,6 +27,14 @@ public class DocumentVisitor {
     public void visit(BulletList bulletList)
     {
         builder.buildElement(bulletList);
+
+        for (ListItem listItem: bulletList.getList())
+        {
+            visit(listItem);
+        }
+
+        builder.buildEndElement(bulletList);
+
     }
 
     public void visit(ListItem listItem)
@@ -34,7 +42,36 @@ public class DocumentVisitor {
         builder.buildElement(listItem);
     }
 
+    public void visit(Table table)
+    {
+        builder.buildElement(table);
+
+        for (TableRow tableRow: table.getList())
+        {
+            visit(tableRow);
+        }
+
+        builder.buildEndElement(table);
+    }
+
+    public void visit(TableRow tableRow)
+    {
+        builder.buildElement(tableRow);
+
+        for (TableData tableData: tableRow.getList())
+        {
+            visit(tableData);
+        }
+
+        builder.buildEndElement(tableRow);
+    }
+    public void visit(TableData tableData)
+    {
+        builder.buildElement(tableData);
+    }
+
     public TextDocumentBuilder getBuilder() {
         return builder;
     }
+
 }

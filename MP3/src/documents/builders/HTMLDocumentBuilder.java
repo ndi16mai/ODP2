@@ -1,49 +1,77 @@
 package documents.builders;
 
 import documents.TextDocument;
-import documents.elements.BulletList;
-import documents.elements.Header;
-import documents.elements.Paragraph;
-import documents.elements.items.ListItem;
+import documents.elements.*;
 
 /**
  * Created by Selma on 2016-02-11.
  */
-public class HTMLDocumentBuilder implements TextDocumentBuilder{
-    private TextDocument textDocument = new TextDocument();
+public class HTMLDocumentBuilder extends TextDocumentBuilder{
 
     @Override
     public void preamble() {
-
+        textDocument.add("<html>\n<body>\n");
     }
 
     @Override
     public void postamble() {
-
+        textDocument.add("</body>\n</html>\n");
     }
 
     @Override
     public void buildElement(Header header) {
-        textDocument.add("<h1> " + header.getText() + "</h1>");
+        textDocument.add("<h1> " + header.getText() + "</h1>\n");
     }
 
     @Override
     public void buildElement(Paragraph paragraph) {
-        textDocument.add("<p>" + paragraph.getText() + "</p>");
+        textDocument.add("<p>" + paragraph.getText() + "</p>\n");
     }
 
     @Override
     public void buildElement(BulletList bulletList) {
+        textDocument.add("<ul>\n");
+    }
 
+    @Override
+    public void buildEndElement(BulletList bulletList)
+    {
+        textDocument.add("</ul>\n");
     }
 
     @Override
     public void buildElement(ListItem listItem) {
-
+        textDocument.add("<li>" + listItem.getText() + "</li>\n");
     }
 
     @Override
-    public TextDocument getDocument() {
-        return null;
+    public void buildElement(Table table)
+    {
+        textDocument.add("<table>\n");
     }
+
+    @Override
+    public void buildEndElement(Table table)
+    {
+        textDocument.add("</table>\n");
+    }
+
+    @Override
+    public void buildElement(TableRow tableRow)
+    {
+        textDocument.add("<tr>\n");
+    }
+
+    @Override
+    public void buildEndElement(TableRow tableRow)
+    {
+        textDocument.add("</tr>\n");
+    }
+
+    @Override
+    public void buildElement(TableData tableData)
+    {
+        textDocument.add("<td>" + tableData.getText() + "</td>\n");
+    }
+
 }

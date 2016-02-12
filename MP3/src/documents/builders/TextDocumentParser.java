@@ -1,7 +1,7 @@
 package documents.builders;
 
 import documents.TextDocument;
-import documents.elements.Element;
+import documents.elements.base.Element;
 import documents.visitors.DocumentVisitor;
 
 import java.util.List;
@@ -18,11 +18,18 @@ public class TextDocumentParser {
 
    public TextDocument parse(List<Element> list)
    {
+      TextDocumentBuilder builder = visitor.getBuilder();
+
+      builder.preamble();
+
       for(Element element: list)
       {
-       element.accept(visitor);
+         element.accept(visitor);
       }
-      return visitor.getBuilder().getDocument();
+
+      builder.postamble();
+
+      return builder.getDocument();
    }
 
 

@@ -4,20 +4,18 @@ import documents.elements.base.TextElement;
 import documents.visitors.DocumentVisitor;
 
 /**
- * Created by Selma on 2016-02-09.
+ * Created by Wareus on 2016-02-12.
  */
-public class Paragraph extends TextElement
+public class TableData extends TextElement
 {
-
-
-    public Paragraph(String text)
+    public TableData(String text)
     {
         super(text);
     }
 
     @Override
-    public void accept(DocumentVisitor visitor) {
+    public void accept(DocumentVisitor visitor)
+    {
         visitor.visit(this);
     }
-
 }

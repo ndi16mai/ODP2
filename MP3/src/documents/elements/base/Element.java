@@ -1,4 +1,4 @@
-package documents.elements;
+package documents.elements.base;
 
 import documents.visitors.DocumentVisitor;
 
@@ -7,5 +7,4 @@ import documents.visitors.DocumentVisitor;
  */
 public interface Element {
     void accept(DocumentVisitor visitor);
-    String getText();
 }

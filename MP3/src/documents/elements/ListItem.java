@@ -4,13 +4,13 @@ import documents.elements.base.TextElement;
 import documents.visitors.DocumentVisitor;
 
 /**
- * Created by Selma on 2016-02-09.
+ * Created by Selma on 2016-02-11.
  */
-public class Paragraph extends TextElement
+public class ListItem extends TextElement
 {
 
 
-    public Paragraph(String text)
+    public ListItem(String text)
     {
         super(text);
     }
