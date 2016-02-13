@@ -1,7 +1,4 @@
-import documents.builders.HTMLDocumentBuilder;
-import documents.builders.PlainTextBuilder;
-import documents.builders.TextDocumentBuilder;
-import documents.builders.TextDocumentParser;
+import documents.builders.*;
 import documents.TextDocument;
 import documents.elements.*;
 import documents.elements.base.Element;
@@ -23,7 +20,7 @@ public class Main {
     {
         List<Element> list = new ArrayList<Element>();
 
-        list.add(new Header("Snowhite & the seven dwarves"));
+        list.add(new Header("Snowhite and the seven dwarves"));
         list.add(new Paragraph("Once upon a time, there was a black lady"));
 
         List<ListItem> listItems = new ArrayList<>();
@@ -50,7 +47,8 @@ public class Main {
 
 
 //        TextDocumentBuilder builder = new PlainTextBuilder();
-        TextDocumentBuilder builder = new HTMLDocumentBuilder();
+//        TextDocumentBuilder builder = new HTMLDocumentBuilder();
+        TextDocumentBuilder builder = new LatexDocumentBuilder();
         DocumentVisitor visitor = new DocumentVisitor(builder);
         TextDocumentParser textDocumentParser = new TextDocumentParser(visitor);
 
