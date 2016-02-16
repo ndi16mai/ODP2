@@ -17,17 +17,17 @@ public class StrictStack<E> implements Stack{
 
 
     @Override
-    public Object push(Object item) {
+    public void push(Object item) {
+
+    }
+
+    @Override
+    public E pop() {
         return null;
     }
 
     @Override
-    public Object pop() {
-        return null;
-    }
-
-    @Override
-    public Object peek() {
+    public E peek() {
         return null;
     }
 
