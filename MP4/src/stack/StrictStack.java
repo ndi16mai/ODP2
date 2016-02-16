@@ -16,7 +16,7 @@ public class StrictStack<E> implements Stack<E>
     }
 
     @Override
-    public void pusch(E item)
+    public void push(E item)
     {
         stack.push(item);
     }

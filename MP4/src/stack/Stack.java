@@ -5,7 +5,7 @@ package stack;
  */
 public interface Stack<E>
 {
-    void pusch(E item);
+    void push(E item);
     E pop();
     E peek();
     boolean isEmpty();
