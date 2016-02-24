@@ -131,6 +131,10 @@ class TowerOfHanoiApp extends JFrame {
         JButton quitB = new JButton("Quit");
         JButton undoButton = new JButton("Undo");
         JButton redoButton = new JButton("Redo");
+        JButton startMacro = new JButton("Rec");
+        JButton endMacro = new JButton("Stop Rec");
+        JButton playMacro = new JButton("Play Macro");
+
         undoButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 try {
@@ -155,6 +159,28 @@ class TowerOfHanoiApp extends JFrame {
                 }
             }
         });
+
+        startMacro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mediator.record();
+            }
+        });
+
+        playMacro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mediator.playMacro();
+            }
+        });
+
+        endMacro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mediator.stopRecording();
+            }
+        });
+
         startB.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 start();
@@ -176,6 +202,9 @@ class TowerOfHanoiApp extends JFrame {
         southP.add(quitB);
         southP.add(undoButton);
         southP.add(redoButton);
+        southP.add(startMacro);
+        southP.add(endMacro);
+        southP.add(playMacro);
         return southP;
     }
 
