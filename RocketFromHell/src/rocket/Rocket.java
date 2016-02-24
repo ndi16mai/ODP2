@@ -5,4 +5,5 @@ package rocket;
  */
 public interface Rocket
 {
+    void accelerate();
 }
