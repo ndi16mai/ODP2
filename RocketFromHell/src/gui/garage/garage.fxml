@@ -1,0 +1,7 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
+    <center>
+
+    </center>
+</BorderPane >
