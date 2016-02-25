@@ -1,8 +1,14 @@
 package rocket;
 
-/**
- * Created by Wareus on 2016-02-25.
- */
-public class RocketComponent
+import javafx.scene.image.Image;
+
+public interface RocketComponent
 {
+    Image getSprite();
+    float getForce();
+    float getMass();
+    float getHandle();
+    int getArmor();
+    int getHull();
+
 }

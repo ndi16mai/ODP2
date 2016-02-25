@@ -86,15 +86,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rocket.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Rocket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rocket/Rocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49945593">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/rocket/RocketComponent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -122,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RocketPreview.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RocketPreview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/garage/RocketPreview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.055495102">
               <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
               <folding />
             </state>
@@ -174,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/gui/Assets.java" />
         <option value="$PROJECT_DIR$/src/gui/Main.java" />
         <option value="$PROJECT_DIR$/src/gui/garage/RocketPreview.java" />
+        <option value="$PROJECT_DIR$/src/rocket/RocketComponent.java" />
         <option value="$PROJECT_DIR$/src/rocket/Rocket.java" />
       </list>
     </option>
@@ -802,12 +800,12 @@
       <workItem from="1456345627816" duration="5331000" />
       <workItem from="1456414459609" duration="626000" />
       <workItem from="1456424504734" duration="707000" />
-      <workItem from="1456435276640" duration="57000" />
+      <workItem from="1456435276640" duration="397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9580000" />
+    <option name="totallyTimeSpent" value="9920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -885,10 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -963,10 +958,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,10 +1015,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,14 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/garage/RocketPreview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Assets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1100,22 +1081,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rocket/RocketComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/rocket/Rocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rocket/Rocket.java">
+    <entry file="file://$PROJECT_DIR$/src/rocket/RocketComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49945593">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/garage/RocketPreview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055495102">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

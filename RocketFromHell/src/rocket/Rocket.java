@@ -5,16 +5,11 @@ import javafx.scene.image.Image;
 /**
  * Created by Wareus on 2016-02-24.
  */
-public class Rocket
+public class Rocket implements RocketComponent
 {
     private Image sprite;
     private float force, mass, handle;
     private int armor, hull;
-
-    public Rocket(Image sprite)
-    {
-        this.sprite = sprite;
-    }
 
     public Image getSprite()
     {
