@@ -1,0 +1,14 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Button?>
+<?import gui.garage.RocketPreview?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
+    <left>
+        <RocketPreview></RocketPreview>
+    </left>
+    <bottom>
+        <Button text="Launch" onAction="#launchGame"></Button>
+    </bottom>
+</BorderPane >
