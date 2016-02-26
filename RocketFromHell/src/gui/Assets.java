@@ -1,5 +1,6 @@
 package gui;
 
+import gui.util.ImageDecorator;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
@@ -13,11 +14,16 @@ import java.io.IOException;
  */
 public class Assets
 {
-    public static Image rocket;
+    public static Image hull, engine, wings;
 
     public static void load()
     {
-        rocket = loadImage("assets/test_rocket.png");
+//        hull = loadImage("assets/Hull.png");
+//        engine = loadImage("assets/Engine.png");
+//        wings = loadImage("assets/Wings.png");
+        hull = loadImage("assets/Hull.png");
+
+        System.out.println("hull = " + hull.getWidth());
     }
 
     private static Image loadImage(String path)
@@ -28,6 +34,6 @@ public class Assets
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return SwingFXUtils.toFXImage(bufferedImage, null);//new Image("assest/test_rocket.png");
+        return SwingFXUtils.toFXImage(bufferedImage, null);
     }
 }

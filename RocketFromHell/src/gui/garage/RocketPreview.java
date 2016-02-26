@@ -13,7 +13,7 @@ public class RocketPreview extends Pane
         Canvas canvas = new Canvas(250, 250);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
-        Image rocket = Assets.rocket;
+        Image rocket = Assets.hull;
 
         gc.drawImage( rocket, 50, 50 );
         this.getChildren().add(canvas);

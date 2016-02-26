@@ -13,12 +13,12 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("garage/garage.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 300));
+        Assets.load();
         primaryStage.show();
     }
 
 
     public static void main(String[] args) {
-        Assets.load();
         launch(args);
     }
 }
