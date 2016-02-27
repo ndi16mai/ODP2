@@ -1,6 +1,5 @@
 package gui;
 
-import gui.util.ImageDecorator;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
@@ -18,12 +17,9 @@ public class Assets
 
     public static void load()
     {
-//        hull = loadImage("assets/Hull.png");
-//        engine = loadImage("assets/Engine.png");
-//        wings = loadImage("assets/Wings.png");
         hull = loadImage("assets/Hull.png");
-
-        System.out.println("hull = " + hull.getWidth());
+        engine = loadImage("assets/Engine.png");
+        wings = loadImage("assets/Wings.png");
     }
 
     private static Image loadImage(String path)

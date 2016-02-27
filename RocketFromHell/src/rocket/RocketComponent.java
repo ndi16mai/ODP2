@@ -1,14 +1,20 @@
 package rocket;
 
 import javafx.scene.image.Image;
+import rocket.construct.RocketBuilderVisitor;
 
-public interface RocketComponent
+public abstract class RocketComponent
 {
-    Image getSprite();
-    float getForce();
-    float getMass();
-    float getHandle();
-    int getArmor();
-    int getHull();
+    public abstract Image getSprite();
+    public abstract float getForce();
+    public abstract float getMass();
+    public abstract float getHandle();
+    public abstract int getArmor();
+    public abstract int getHull();
+
+    public void accept(RocketBuilderVisitor visitor)
+    {
+        visitor.visit(this);
+    }
 
 }
