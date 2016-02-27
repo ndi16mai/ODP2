@@ -11,7 +11,7 @@ import rocket.RocketSpecs;
 public class RocketBuilder
 {
     private Rocket rocket = new Rocket();
-    private ImageBuilder imageBuilder;
+    private ImageBuilder imageBuilder = new ImageBuilder();
 
     public void addComponent(RocketComponent rocketComponent)
     {
