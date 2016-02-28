@@ -1,13 +1,28 @@
 <?import javafx.scene.layout.BorderPane?>
-
 <?import javafx.scene.control.Button?>
-<?import gui.garage.RocketPreview?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Tab?>
+
+<?import javafx.scene.control.TabPane?>
 <BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
-    <left>
-        <RocketPreview></RocketPreview>
-    </left>
+    <center>
+        <ImageView fx:id="rocketView"></ImageView>
+    </center>
+    <right>
+        <TabPane>
+            <tabs>
+                <Tab text="Specs" closable="false">
+                    <content>
+                        <fx:include fx:id="fooTabPage" source="rocketSpecView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab text="Shop" closable="false">
+                    <content>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </right>
     <bottom>
         <Button text="Launch" onAction="#launchGame"></Button>
     </bottom>

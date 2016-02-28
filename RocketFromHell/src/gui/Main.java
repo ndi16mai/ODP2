@@ -13,7 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("garage/garage.fxml"));
         primaryStage.setTitle("Rocket to Hell");
 
-        Scene scene = new Scene(root, 300, 300);
+        Scene scene = new Scene(root, 800, 600);
 
         scene.getStylesheets().add("gui/styles/style.css");
 

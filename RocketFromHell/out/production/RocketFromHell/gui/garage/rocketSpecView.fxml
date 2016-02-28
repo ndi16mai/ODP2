@@ -1,0 +1,11 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <VBox>
+            <HBox><Text text="Hull: "></Text><Text fx:id="hullSpec"></Text></HBox>
+        </VBox>
+    </center>
+</BorderPane >
