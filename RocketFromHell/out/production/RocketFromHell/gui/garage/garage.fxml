@@ -13,7 +13,7 @@
             <tabs>
                 <Tab text="Specs" closable="false">
                     <content>
-                        <fx:include fx:id="fooTabPage" source="rocketSpecView.fxml"/>
+                        <fx:include fx:id="rocketSpecView" source="rocketSpecView.fxml"/>
                     </content>
                 </Tab>
                 <Tab text="Shop" closable="false">

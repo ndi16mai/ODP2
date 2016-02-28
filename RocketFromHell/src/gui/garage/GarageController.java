@@ -2,6 +2,9 @@ package gui.garage;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.effect.Blend;
+import javafx.scene.effect.Bloom;
+import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.ImageView;
 import rocket.Rocket;
 import rocket.components.Engine;
@@ -20,8 +23,8 @@ import java.util.ResourceBundle;
  */
 public class GarageController implements Initializable
 {
-    @FXML
-    private ImageView rocketView;
+    @FXML private ImageView rocketView;
+    @FXML private RocketSpecViewController rocketSpecView;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -36,6 +39,8 @@ public class GarageController implements Initializable
         Rocket rocket = rocketBuilder.getRocket();
 
         rocketView.setImage(rocket.getSprite());
+
+        rocketView.setEffect(new Bloom());
     }
 
     @FXML
