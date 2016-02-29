@@ -7,6 +7,9 @@
         <VBox>
             <HBox><Text text="Mass: "></Text><Text fx:id="mass"></Text></HBox>
             <HBox><Text text="Hull: "></Text><Text fx:id="hull"></Text></HBox>
+            <HBox><Text text="Armor: "></Text><Text fx:id="armor"></Text></HBox>
+            <HBox><Text text="Force: "></Text><Text fx:id="force"></Text></HBox>
+            <HBox><Text text="Handle: "></Text><Text fx:id="handle"></Text></HBox>
         </VBox>
     </center>
 </BorderPane >

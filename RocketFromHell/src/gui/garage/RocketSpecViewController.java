@@ -9,12 +9,15 @@ import rocket.RocketSpecs;
  */
 public class RocketSpecViewController
 {
-    @FXML private Text hull, mass;
+    @FXML private Text hull, mass, armor, force, handle;
 
 
     public void setRocketSpec(RocketSpecs specs)
     {
-        mass.setText(specs.getMass() + "");
+        mass.setText((int)specs.getMass() + "");
+        force.setText((int)specs.getForce() + "");
+        handle.setText((int)specs.getHandle() + "");
         hull.setText(specs.getHull() + "");
+        armor.setText(specs.getArmor() + "");
     }
 }
