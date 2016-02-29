@@ -6,6 +6,7 @@ import javafx.scene.effect.Blend;
 import javafx.scene.effect.Bloom;
 import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import rocket.Rocket;
 import rocket.components.Engine;
 import rocket.components.Hull;
@@ -24,7 +25,7 @@ import java.util.ResourceBundle;
 public class GarageController implements Initializable
 {
     @FXML private ImageView rocketView;
-    @FXML private RocketSpecViewController rocketSpecView;
+    @FXML private RocketSpecViewController specsController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -41,6 +42,8 @@ public class GarageController implements Initializable
         rocketView.setImage(rocket.getSprite());
 
         rocketView.setEffect(new Bloom());
+
+        specsController.setRocketSpec(rocket.getSpecs());
     }
 
     @FXML
