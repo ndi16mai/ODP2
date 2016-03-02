@@ -1,25 +1,30 @@
 package rocket;
 
+import gui.game.pawns.Pawn;
 import javafx.scene.image.Image;
 import rocket.util.Vector2;
 
 /**
  * Created by Wareus on 2016-02-24.
  */
-public class Rocket
+public class Rocket extends Pawn
 {
-    private Image sprite;
     private RocketSpecs specs = new RocketSpecs();
-    private Vector2 pos = new Vector2(0,0);
+    private int health;
+
+    public Rocket() {
+        super(null, new Vector2(200,300));
+        height = 200;
+    }
 
     public void setSprite(Image sprite)
     {
-        this.sprite = sprite;
+        this.image = sprite;
     }
 
     public Image getSprite()
     {
-        return sprite;
+        return image;
     }
 
     public RocketSpecs getSpecs()
@@ -27,11 +32,13 @@ public class Rocket
         return specs;
     }
 
-    public Vector2 getPos() {
-        return pos;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
-    public void setPos(Vector2 pos) {
-        this.pos = pos;
+    public void takeDamage(int damage)
+    {
+        health -= damage;
     }
+
 }

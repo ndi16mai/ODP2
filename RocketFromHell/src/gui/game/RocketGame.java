@@ -1,6 +1,8 @@
 package gui.game;
 
 import gui.Assets;
+import gui.game.pawns.Imp;
+import gui.game.pawns.Pawn;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Bloom;
 import rocket.Rocket;
@@ -13,12 +15,17 @@ import rocket.construct.RocketBuilderVisitor;
 import rocket.construct.RocketDirector;
 import rocket.util.Vector2;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Selma on 2016-03-02.
  */
 public class RocketGame extends Game {
 
     private Rocket rocket;
+
+    private List<Pawn> pawns = new LinkedList<>();
 
     public RocketGame() {
         super();
@@ -30,18 +37,21 @@ public class RocketGame extends Game {
         rocketDirector.build();
 
         rocket = rocketBuilder.getRocket();
-
+        pawns.add(new Imp(new Vector2(200,0)));
     }
 
     @Override
     public void render(GraphicsContext gc) {
         gc.drawImage(Assets.hell, 0, 0);
-        gc.drawImage(rocket.getSprite(), rocket.getPos().getX() ,rocket.getPos().getY());
+        rocket.draw(gc);
+        pawns.forEach(pawn -> pawn.draw(gc));
     }
 
     @Override
     public void update() {
 
-        rocket.setPos(new Vector2(rocket.getPos().getX() ,rocket.getPos().getY() +1));
+        pawns.forEach(pawn -> pawn.update());
+
+
     }
 }

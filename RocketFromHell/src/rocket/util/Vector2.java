@@ -18,4 +18,9 @@ public class Vector2 {
     public float getY() {
         return y;
     }
+
+    public Vector2 translate(Vector2 moveDelta)
+    {
+        return new Vector2(x + moveDelta.getX(), y + moveDelta.getY());
+    }
 }
