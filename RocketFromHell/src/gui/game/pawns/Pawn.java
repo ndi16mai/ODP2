@@ -4,6 +4,8 @@ import gui.game.pawns.strategy.collison.CollisionStrategy;
 import gui.game.pawns.strategy.move.MoveStrategy;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.shape.Rectangle;
+import rocket.Rocket;
 import rocket.util.Vector2;
 
 /**
@@ -42,5 +44,18 @@ public abstract class Pawn {
 
     public boolean isAlive(){
        return alive;
+    }
+
+    public void isColliding(Rocket rocket)
+    {
+        if (collisionStrategy != null) {
+            Rectangle rectangle = new Rectangle(pos.getX(), pos.getY(), width, height);
+            Rectangle rocketRectangle = new Rectangle(rocket.pos.getX(), rocket.pos.getY(), rocket.width, rocket.height);
+
+            if (rectangle.intersects(rocketRectangle.getLayoutBounds())) {
+                collisionStrategy.collide(rocket);
+                destroy();
+            }
+        }
     }
 }

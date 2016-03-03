@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import rocket.Rocket;
 import rocket.components.Engine;
+import rocket.components.FuelTank;
 import rocket.components.Hull;
 import rocket.components.Wings;
 import rocket.construct.RocketBlueprint;
@@ -30,7 +31,7 @@ public class GarageController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        RocketBlueprint blueprint = new RocketBlueprint(new Hull(), new Wings(), new Engine());
+        RocketBlueprint blueprint = new RocketBlueprint(new Hull(), new Wings(), new Engine(), new FuelTank());
 
         RocketBuilder rocketBuilder = new RocketBuilder();
         RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);

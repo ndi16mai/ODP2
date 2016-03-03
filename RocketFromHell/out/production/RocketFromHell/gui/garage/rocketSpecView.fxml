@@ -10,7 +10,8 @@
             <HBox><Text text="Armor: "></Text><Text fx:id="armor"></Text></HBox>
             <HBox><Text text="Force: "></Text><Text fx:id="force"></Text></HBox>
             <HBox><Text text="Handle: "></Text><Text fx:id="handle"></Text></HBox>
+            <HBox><Text text="Fuel: "></Text><Text fx:id="fuel"></Text></HBox>
         </VBox>
-            <HBox><Text text="Health: "></Text><Text fx:id="health"></Text></HBox>
+
     </center>
 </BorderPane >

@@ -7,6 +7,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.effect.Bloom;
 import rocket.Rocket;
 import rocket.components.Engine;
+import rocket.components.FuelTank;
 import rocket.components.Hull;
 import rocket.components.Wings;
 import rocket.construct.RocketBlueprint;
@@ -29,7 +30,7 @@ public class RocketGame extends Game {
 
     public RocketGame() {
         super();
-        RocketBlueprint blueprint = new RocketBlueprint(new Hull(), new Wings(), new Engine());
+        RocketBlueprint blueprint = new RocketBlueprint(new Hull(), new Wings(), new Engine(), new FuelTank());
 
         RocketBuilder rocketBuilder = new RocketBuilder();
         RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);
@@ -50,8 +51,13 @@ public class RocketGame extends Game {
     @Override
     public void update() {
 
-        pawns.forEach(pawn -> pawn.update());
-
+        pawns.forEach(pawn -> {
+            pawn.update();
+            pawn.isColliding(rocket);
+            if(!pawn.isAlive()) {
+                pawns.remove(pawn);
+            }
+        });
 
     }
 }
