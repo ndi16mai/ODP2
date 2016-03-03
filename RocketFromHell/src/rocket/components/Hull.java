@@ -44,4 +44,9 @@ public class Hull extends RocketComponent
     {
         return 100;
     }
+
+    @Override
+    public int getFuel() {
+        return 0;
+    }
 }

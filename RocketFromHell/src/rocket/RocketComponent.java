@@ -11,6 +11,7 @@ public abstract class RocketComponent
     public abstract float getHandle();
     public abstract int getArmor();
     public abstract int getHull();
+    public abstract int getFuel();
 
     public void accept(RocketBuilderVisitor visitor)
     {

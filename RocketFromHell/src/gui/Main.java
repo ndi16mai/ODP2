@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 //        Parent root = FXMLLoader.load(getClass().getResource("garage/garage.fxml"));
-        primaryStage.setTitle("Rocket to Hell");
+        primaryStage.setTitle("Rocket From Hell");
 
         Pane root = new RocketGame();
 

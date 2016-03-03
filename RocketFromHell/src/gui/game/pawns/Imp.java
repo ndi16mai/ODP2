@@ -17,4 +17,6 @@ public class Imp extends Pawn {
         collisionStrategy = new DamageCollision(5);
     }
 
+
+
 }

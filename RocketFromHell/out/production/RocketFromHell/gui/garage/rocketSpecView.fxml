@@ -11,5 +11,6 @@
             <HBox><Text text="Force: "></Text><Text fx:id="force"></Text></HBox>
             <HBox><Text text="Handle: "></Text><Text fx:id="handle"></Text></HBox>
         </VBox>
+            <HBox><Text text="Health: "></Text><Text fx:id="health"></Text></HBox>
     </center>
 </BorderPane >

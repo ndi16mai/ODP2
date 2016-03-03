@@ -44,4 +44,11 @@ public class Engine extends RocketComponent
     {
         return 0;
     }
+
+    @Override
+    public int getFuel() {
+        return 0;
+    }
+
+
 }
