@@ -4,6 +4,9 @@
 <?import javafx.scene.control.Tab?>
 
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import gui.util.ImageGridView?>
 <BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
     <center>
         <ImageView fx:id="rocketView"></ImageView>
@@ -18,12 +21,14 @@
                 </Tab>
                 <Tab text="Shop" closable="false">
                     <content>
+                        <ImageGridView fx:id="gridView"></ImageGridView>
                     </content>
                 </Tab>
             </tabs>
         </TabPane>
     </right>
     <bottom>
-        <Button text="Launch" onAction="#launchGame"></Button>
+        <HBox><Pane HBox.hgrow="ALWAYS" /><Button text="Launch" onAction="#launchGame"></Button></HBox>
+
     </bottom>
 </BorderPane >

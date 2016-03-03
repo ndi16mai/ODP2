@@ -1,5 +1,7 @@
 package gui.garage;
 
+import gui.util.ImageGridView;
+import gui.util.RocketComponentView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.effect.Blend;
@@ -26,6 +28,8 @@ public class GarageController implements Initializable
 {
     @FXML private ImageView rocketView;
     @FXML private RocketSpecViewController specsController;
+    @FXML private ImageGridView gridView;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -44,6 +48,9 @@ public class GarageController implements Initializable
         rocketView.setEffect(new Bloom());
 
         specsController.setRocketSpec(rocket.getSpecs());
+
+        for (int i = 0; i < 10; i++)
+            gridView.add(new RocketComponentView(new Hull()));
     }
 
     @FXML
