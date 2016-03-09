@@ -1,4 +1,4 @@
-package gui.game.pawns.strategy.collison;
+package game.pawns.strategy.collison;
 
 import rocket.Rocket;
 

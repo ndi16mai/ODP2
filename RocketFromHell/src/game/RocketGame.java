@@ -1,10 +1,10 @@
-package gui.game;
+package game;
 
+import game.control.InputHandler;
 import gui.Assets;
-import gui.game.pawns.Imp;
-import gui.game.pawns.Pawn;
+import game.pawns.Imp;
+import game.pawns.Pawn;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.effect.Bloom;
 import rocket.Rocket;
 import rocket.components.Engine;
 import rocket.components.FuelTank;
@@ -50,7 +50,14 @@ public class RocketGame extends Game {
 
     @Override
     public void update() {
-
+        if(inputHandler.isPressed("LEFT"))
+        {
+            rocket.rotated(-1);
+        }
+        if(inputHandler.isPressed("RIGHT"))
+        {
+            rocket.rotated(1);
+        }
         pawns.forEach(pawn -> {
             pawn.update();
             pawn.isColliding(rocket);

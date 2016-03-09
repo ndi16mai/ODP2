@@ -1,5 +1,7 @@
-package gui.game;
+package game;
 
+import game.control.InputHandler;
+import game.control.RocketInput;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -12,6 +14,7 @@ public abstract class Game extends Pane{
 
     public abstract void render(GraphicsContext gc);
     public abstract void update();
+    protected InputHandler inputHandler;
 
     public Game() {
 
@@ -32,5 +35,10 @@ public abstract class Game extends Pane{
 
             }
         }.start();
+    }
+
+    public void setInputHandler(InputHandler inputHandler)
+    {
+        this.inputHandler = inputHandler;
     }
 }

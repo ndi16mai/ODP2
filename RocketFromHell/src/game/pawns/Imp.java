@@ -1,8 +1,8 @@
-package gui.game.pawns;
+package game.pawns;
 
 import gui.Assets;
-import gui.game.pawns.strategy.collison.DamageCollision;
-import gui.game.pawns.strategy.move.FallingStrategy;
+import game.pawns.strategy.collison.DamageCollision;
+import game.pawns.strategy.move.FallingStrategy;
 import rocket.util.Vector2;
 
 /**

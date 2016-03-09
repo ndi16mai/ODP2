@@ -1,4 +1,4 @@
-package gui.game.pawns.strategy.move;
+package game.pawns.strategy.move;
 
 import rocket.util.Vector2;
 

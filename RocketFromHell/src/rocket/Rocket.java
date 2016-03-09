@@ -1,6 +1,6 @@
 package rocket;
 
-import gui.game.pawns.Pawn;
+import game.pawns.Pawn;
 import javafx.scene.image.Image;
 import rocket.util.Vector2;
 

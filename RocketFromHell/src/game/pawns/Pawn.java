@@ -1,10 +1,12 @@
-package gui.game.pawns;
+package game.pawns;
 
-import gui.game.pawns.strategy.collison.CollisionStrategy;
-import gui.game.pawns.strategy.move.MoveStrategy;
+import game.pawns.strategy.collison.CollisionStrategy;
+import game.pawns.strategy.move.MoveStrategy;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 import rocket.Rocket;
 import rocket.util.Vector2;
 
@@ -19,6 +21,7 @@ public abstract class Pawn {
     protected int width = 100, height = 100;
     protected boolean alive = true;
     protected CollisionStrategy collisionStrategy;
+    protected float angle;
 
     public Pawn(Image image, Vector2 pos) {
         this.image = image;
@@ -27,7 +30,11 @@ public abstract class Pawn {
 
     public void draw(GraphicsContext gc)
     {
+        gc.save();
+        rotate(gc);
         gc.drawImage(image, pos.getX(), pos.getY(), width, height);
+        gc.restore();
+
     }
 
     public void update()
@@ -57,5 +64,17 @@ public abstract class Pawn {
                 destroy();
             }
         }
+    }
+
+    public void rotated(float angle)
+    {
+        this.angle += angle;
+    }
+
+    private void rotate(GraphicsContext gc) {
+        float px = (float) (pos.getX() + image.getWidth()/2);
+        float py = (float) (pos.getY() + image.getHeight()/2);
+        Rotate rotate = new Rotate(angle, px, py);
+        gc.setTransform(rotate.getMxx(), rotate.getMyx(), rotate.getMxy(), rotate.getMyy(), rotate.getTx(), rotate.getTy());
     }
 }
