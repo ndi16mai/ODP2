@@ -2,8 +2,9 @@ package gui.util;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import rocket.RocketComponent;
 
 /**
@@ -21,6 +22,8 @@ public class RocketComponentView extends ImageView
         setFitHeight(imageSize);
         setFitWidth(imageSize);
         this.component = component;
+
+        setEffect( new DropShadow( 30, Color.DARKRED ) );
 
         setOnMouseClicked(event -> {
             System.out.println("click");
