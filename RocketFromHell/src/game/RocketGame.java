@@ -1,6 +1,7 @@
 package game;
 
 import game.control.InputHandler;
+import game.levels.Camera;
 import gui.Assets;
 import game.pawns.Imp;
 import game.pawns.Pawn;
@@ -25,8 +26,8 @@ import java.util.List;
 public class RocketGame extends Game {
 
     private Rocket rocket;
-
     private List<Pawn> pawns = new LinkedList<>();
+    private Camera camera;
 
     public RocketGame() {
         super();
@@ -39,17 +40,22 @@ public class RocketGame extends Game {
 
         rocket = rocketBuilder.getRocket();
         pawns.add(new Imp(new Vector2(200,0)));
+
+        this.camera = new Camera(0,0);
     }
 
     @Override
     public void render(GraphicsContext gc) {
+        gc.translate(camera.getX(), camera.getY());
         gc.drawImage(Assets.hell, 0, 0);
         rocket.draw(gc);
         pawns.forEach(pawn -> pawn.draw(gc));
+        gc.translate(-camera.getX(), -camera.getY());
     }
 
     @Override
     public void update() {
+        camera.tick();
         if(inputHandler.isPressed("LEFT"))
         {
             rocket.rotated(-1);
