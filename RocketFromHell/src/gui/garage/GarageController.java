@@ -1,7 +1,5 @@
 package gui.garage;
 
-import gui.util.ImageGridView;
-import gui.util.RocketComponentView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.effect.Blend;
@@ -10,6 +8,7 @@ import javafx.scene.effect.BoxBlur;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import rocket.Rocket;
+import rocket.RocketComponent;
 import rocket.components.Engine;
 import rocket.components.Hull;
 import rocket.components.Wings;
@@ -19,7 +18,12 @@ import rocket.construct.RocketBuilderVisitor;
 import rocket.construct.RocketDirector;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import gui.util.shop.ImageGridView;
+import gui.util.shop.RocketComponentSelectHandler;
+import gui.util.shop.RocketComponentView;
 
 /**
  * Created by Wareus on 2016-02-24.
@@ -49,8 +53,20 @@ public class GarageController implements Initializable
 
         specsController.setRocketSpec(rocket.getSpecs());
 
-        for (int i = 0; i < 10; i++)
-            gridView.add(new RocketComponentView(new Hull()));
+        RocketComponentSelectHandler handler = new RocketComponentSelectHandler();
+        ArrayList<RocketComponent> components = new ArrayList<>();
+        components.add(new Hull());
+        components.add(new Wings());
+        components.add(new Engine());
+        
+
+        for (RocketComponent component: components)
+        {
+        	RocketComponentView componentView = new RocketComponentView(component);
+        	componentView.setHandler(handler);
+        	gridView.add(componentView);
+        	
+        }
     }
 
     @FXML

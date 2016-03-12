@@ -1,4 +1,4 @@
-package gui.util;
+package gui.util.shop;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ImageGridView extends GridPane
 {
-    private int imageSize = 50, cols = 4;
+    private int cols = 4;
     private List<ImageView> images = new ArrayList<>();
 
     public void add(ImageView imageView)

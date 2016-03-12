@@ -6,7 +6,8 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import gui.util.ImageGridView?>
+<?import gui.util.shop.ImageGridView?>
+<?import javafx.scene.layout.VBox?>
 <BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
     <center>
         <ImageView fx:id="rocketView"></ImageView>
@@ -21,7 +22,10 @@
                 </Tab>
                 <Tab text="Shop" closable="false">
                     <content>
-                        <ImageGridView fx:id="gridView"></ImageGridView>
+                    	<VBox>
+	                        <ImageGridView fx:id="gridView"></ImageGridView>
+	                        <Button fx:id="shopButton" text="Buy"></Button>
+                    	</VBox>
                     </content>
                 </Tab>
             </tabs>
