@@ -12,40 +12,4 @@ public class Engine extends RocketComponent
     public Engine(Image sprite, float force, float mass, float handle, int armor, int hull) {
 		super(sprite, force, mass, handle, armor, hull);
 	}
-
-	@Override
-    public Image getSprite()
-    {
-        return Assets.engine;
-    }
-
-    @Override
-    public float getForce()
-    {
-        return 100;
-    }
-
-    @Override
-    public float getMass()
-    {
-        return 20;
-    }
-
-    @Override
-    public float getHandle()
-    {
-        return -10;
-    }
-
-    @Override
-    public int getArmor()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getHull()
-    {
-        return 0;
-    }
 }

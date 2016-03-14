@@ -12,40 +12,4 @@ public class Hull extends RocketComponent
     public Hull(Image sprite, float force, float mass, float handle, int armor, int hull) {
 		super(sprite, force, mass, handle, armor, hull);
 	}
-
-	@Override
-    public Image getSprite()
-    {
-        return Assets.hull;
-    }
-
-    @Override
-    public float getForce()
-    {
-        return 0;
-    }
-
-    @Override
-    public float getMass()
-    {
-        return 200;
-    }
-
-    @Override
-    public float getHandle()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getArmor()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getHull()
-    {
-        return 100;
-    }
 }

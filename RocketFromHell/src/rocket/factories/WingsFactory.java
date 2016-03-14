@@ -9,7 +9,7 @@ import rocket.components.Wings;
  */
 public enum WingsFactory
 {
-    WING(()->{return new Wings(Assets.wings, 0,20,50,0,0);}),
+    WINGS(()->{return new Wings(Assets.wings, 0,20,50,0,0);}),
     BLUE_WINGS(()->{return new Wings(Assets.blueWings, 0,10,100,0,0);});
     private WingProvider wingProvider;
 

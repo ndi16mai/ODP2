@@ -40,7 +40,7 @@ public class GarageController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        RocketBlueprint blueprint = new RocketBlueprint(HullFactory.HULL.get(), WingsFactory.WING.get(), EngineFactory.ENGINE.get());
+        RocketBlueprint blueprint = new RocketBlueprint(HullFactory.HULL.get(), WingsFactory.WINGS.get(), EngineFactory.ENGINE.get());
 
         RocketBuilder rocketBuilder = new RocketBuilder();
         RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);
@@ -62,7 +62,7 @@ public class GarageController implements Initializable
         for (WingsFactory wing: Arrays.asList(WingsFactory.values()))
         {
         	RocketComponentView<Wings> componentView = new RocketComponentView(wing.get());
-        	componentView.setHandler(handler);
+            componentView.setHandler(handler);
         	wings.add(componentView);
         }
         for (HullFactory hull: Arrays.asList(HullFactory.values()))

@@ -13,8 +13,7 @@ import java.io.IOException;
  */
 public class Assets
 {
-    public static Image hull, engine, wings;
-    public static Image blueHull, blueEngine, blueWings;
+    public static Image hull, engine, wings, blueHull, blueEngine, blueWings;
 
     public static void load()
     {

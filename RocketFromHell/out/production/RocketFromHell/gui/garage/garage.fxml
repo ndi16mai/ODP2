@@ -6,7 +6,8 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import gui.util.ImageGridView?>
+<?import gui.util.shop.ImageGridView?>
+<?import javafx.scene.layout.VBox?>
 <BorderPane fx:controller="gui.garage.GarageController" xmlns:fx="http://javafx.com/fxml">
     <center>
         <ImageView fx:id="rocketView"></ImageView>
@@ -19,9 +20,25 @@
                         <fx:include fx:id="specs" source="rocketSpecView.fxml"/>
                     </content>
                 </Tab>
-                <Tab text="Shop" closable="false">
+                <Tab text="Hull" closable="false">
                     <content>
-                        <ImageGridView fx:id="gridView"></ImageGridView>
+                    	<VBox>
+	                        <ImageGridView fx:id="hulls"></ImageGridView>
+                    	</VBox>
+                    </content>
+                </Tab>
+                <Tab text="Wings" closable="false">
+                    <content>
+                    	<VBox>
+	                        <ImageGridView fx:id="wings"></ImageGridView>
+                    	</VBox>
+                    </content>
+                </Tab>
+                <Tab text="Engines" closable="false">
+                    <content>
+                    	<VBox>
+	                        <ImageGridView fx:id="engines"></ImageGridView>
+                    	</VBox>
                     </content>
                 </Tab>
             </tabs>
