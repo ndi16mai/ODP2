@@ -20,11 +20,24 @@
                         <fx:include fx:id="specs" source="rocketSpecView.fxml"/>
                     </content>
                 </Tab>
-                <Tab text="Shop" closable="false">
+                <Tab text="Hull" closable="false">
                     <content>
                     	<VBox>
-	                        <ImageGridView fx:id="gridView"></ImageGridView>
-	                        <Button fx:id="shopButton" text="Buy"></Button>
+	                        <ImageGridView fx:id="hulls"></ImageGridView>
+                    	</VBox>
+                    </content>
+                </Tab>
+                <Tab text="Wings" closable="false">
+                    <content>
+                    	<VBox>
+	                        <ImageGridView fx:id="wings"></ImageGridView>
+                    	</VBox>
+                    </content>
+                </Tab>
+                <Tab text="Engines" closable="false">
+                    <content>
+                    	<VBox>
+	                        <ImageGridView fx:id="engines"></ImageGridView>
                     	</VBox>
                     </content>
                 </Tab>

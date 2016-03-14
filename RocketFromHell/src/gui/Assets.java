@@ -14,12 +14,16 @@ import java.io.IOException;
 public class Assets
 {
     public static Image hull, engine, wings;
+    public static Image blueHull, blueEngine, blueWings;
 
     public static void load()
     {
         hull = loadImage("assets/Hull.png");
         engine = loadImage("assets/Engine.png");
         wings = loadImage("assets/Wings.png");
+        blueHull = loadImage("assets/BlueHull.png");
+        blueEngine = loadImage("assets/BlueEngine.png");
+        blueWings = loadImage("assets/BlueWings.png");
     }
 
     private static Image loadImage(String path)

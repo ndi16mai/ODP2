@@ -10,13 +10,13 @@ import rocket.RocketComponent;
 /**
  * Created by Wareus on 2016-03-03.
  */
-public class RocketComponentView extends ImageView
+public class RocketComponentView <T extends RocketComponent> extends ImageView
 {
 	private RocketComponentSelectHandler handler;
     private int imageSize = 50;
-    private RocketComponent component;
+    private T component;
 
-    public RocketComponentView(RocketComponent component)
+    public RocketComponentView(T component)
     {
         super(component.getSprite());
 
