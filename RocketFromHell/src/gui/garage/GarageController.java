@@ -1,5 +1,6 @@
 package gui.garage;
 
+import static gui.util.state.GameStateMachine.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.effect.Bloom;
@@ -38,7 +39,6 @@ public class GarageController implements Initializable
     @FXML private RocketSpecViewController specsController;
     @FXML private ImageGridView wingsGridView, hullsGridView, enginesGridView;
 
-    private Rocket rocket;
     private RocketComponentSelectHandler<Wings> wingHandler = new RocketComponentSelectHandler<>();
     private RocketComponentSelectHandler<Hull> hullHandler = new RocketComponentSelectHandler<>();
     private RocketComponentSelectHandler<Engine> engineHandler = new RocketComponentSelectHandler<>();
@@ -98,7 +98,7 @@ public class GarageController implements Initializable
     @FXML
     public void launchGame()
     {
-        System.out.println("hej");
+        State.GAME.updateScene();
     }
     
     private void buildRocket()

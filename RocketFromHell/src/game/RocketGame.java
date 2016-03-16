@@ -1,24 +1,11 @@
 package game;
 
-import game.control.InputHandler;
+import static gui.util.state.GameStateMachine.*;
 import game.levels.Camera;
 import gui.Assets;
 import game.pawns.Imp;
 import game.pawns.Pawn;
 import javafx.scene.canvas.GraphicsContext;
-import rocket.Rocket;
-import rocket.components.Engine;
-import rocket.components.FuelTank;
-import rocket.components.Hull;
-import rocket.components.Wings;
-import rocket.construct.RocketBlueprint;
-import rocket.construct.RocketBuilder;
-import rocket.construct.RocketBuilderVisitor;
-import rocket.construct.RocketDirector;
-import rocket.factories.EngineFactory;
-import rocket.factories.FuelTankFactory;
-import rocket.factories.HullFactory;
-import rocket.factories.WingsFactory;
 import rocket.util.Vector2;
 
 import java.util.LinkedList;
@@ -29,20 +16,11 @@ import java.util.List;
  */
 public class RocketGame extends Game {
 
-    private Rocket rocket;
     private List<Pawn> pawns = new LinkedList<>();
     private Camera camera;
 
     public RocketGame() {
         super();
-        RocketBlueprint blueprint = new RocketBlueprint(HullFactory.HULL.get(), WingsFactory.WINGS.get(), EngineFactory.ENGINE.get(), FuelTankFactory.FUEL_TANK.get());
-
-        RocketBuilder rocketBuilder = new RocketBuilder();
-        RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);
-        RocketDirector rocketDirector = new RocketDirector(visitor, blueprint);
-        rocketDirector.build();
-
-        rocket = rocketBuilder.getRocket();
         pawns.add(new Imp(new Vector2(200,0)));
 
         this.camera = new Camera(0,0);
