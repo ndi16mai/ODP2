@@ -23,21 +23,21 @@
                 <Tab text="Hull" closable="false">
                     <content>
                     	<VBox>
-	                        <ImageGridView fx:id="hulls"></ImageGridView>
+	                        <ImageGridView fx:id="hullsGridView"></ImageGridView>
                     	</VBox>
                     </content>
                 </Tab>
                 <Tab text="Wings" closable="false">
                     <content>
                     	<VBox>
-	                        <ImageGridView fx:id="wings"></ImageGridView>
+	                        <ImageGridView fx:id="wingsGridView"></ImageGridView>
                     	</VBox>
                     </content>
                 </Tab>
                 <Tab text="Engines" closable="false">
                     <content>
                     	<VBox>
-	                        <ImageGridView fx:id="engines"></ImageGridView>
+	                        <ImageGridView fx:id="enginesGridView"></ImageGridView>
                     	</VBox>
                     </content>
                 </Tab>
