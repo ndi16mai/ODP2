@@ -7,38 +7,9 @@ import rocket.RocketComponent;
  * Created by Selma on 2016-03-03.
  */
 public class FuelTank extends RocketComponent {
-    @Override
-    public Image getSprite() {
-        return null;
-    }
 
-    @Override
-    public float getForce() {
-        return 0;
-    }
-
-    @Override
-    public float getMass() {
-        return 0;
-    }
-
-    @Override
-    public float getHandle() {
-        return 0;
-    }
-
-    @Override
-    public int getArmor() {
-        return 0;
-    }
-
-    @Override
-    public int getHull() {
-        return 0;
-    }
-
-    @Override
-    public int getFuel() {
-        return 0;
+    public FuelTank(float force, float mass, float handle, int armor, int hull, float fuel)
+    {
+        super(null, force, mass, handle, armor, hull, fuel);
     }
 }

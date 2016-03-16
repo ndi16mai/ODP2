@@ -15,6 +15,10 @@ import rocket.construct.RocketBlueprint;
 import rocket.construct.RocketBuilder;
 import rocket.construct.RocketBuilderVisitor;
 import rocket.construct.RocketDirector;
+import rocket.factories.EngineFactory;
+import rocket.factories.FuelTankFactory;
+import rocket.factories.HullFactory;
+import rocket.factories.WingsFactory;
 import rocket.util.Vector2;
 
 import java.util.LinkedList;
@@ -31,7 +35,7 @@ public class RocketGame extends Game {
 
     public RocketGame() {
         super();
-        RocketBlueprint blueprint = new RocketBlueprint(new Hull(), new Wings(), new Engine(), new FuelTank());
+        RocketBlueprint blueprint = new RocketBlueprint(HullFactory.HULL.get(), WingsFactory.WINGS.get(), EngineFactory.ENGINE.get(), FuelTankFactory.FUEL_TANK.get());
 
         RocketBuilder rocketBuilder = new RocketBuilder();
         RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);
