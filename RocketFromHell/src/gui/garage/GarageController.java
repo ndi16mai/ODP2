@@ -7,9 +7,11 @@ import javafx.scene.image.ImageView;
 import rocket.Rocket;
 import rocket.RocketComponent;
 import rocket.factories.EngineFactory;
+import rocket.factories.FuelTankFactory;
 import rocket.factories.HullFactory;
 import rocket.factories.WingsFactory;
 import rocket.components.Engine;
+import rocket.components.FuelTank;
 import rocket.components.Hull;
 import rocket.components.Wings;
 import rocket.construct.RocketBlueprint;
@@ -43,6 +45,7 @@ public class GarageController implements Initializable
     private Hull hull = HullFactory.HULL.get();
     private Wings wings = WingsFactory.WINGS.get();
     private Engine engine = EngineFactory.ENGINE.get();
+    private FuelTank fuelTank = FuelTankFactory.FUEL_TANK.get();
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
@@ -100,7 +103,7 @@ public class GarageController implements Initializable
     
     private void buildRocket()
     {
-        RocketBlueprint blueprint = new RocketBlueprint(hull, wings, engine);
+        RocketBlueprint blueprint = new RocketBlueprint(hull, wings, engine, fuelTank);
 
         RocketBuilder rocketBuilder = new RocketBuilder();
         RocketBuilderVisitor visitor = new RocketBuilderVisitor(rocketBuilder);

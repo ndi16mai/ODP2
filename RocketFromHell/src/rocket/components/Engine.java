@@ -9,7 +9,8 @@ import rocket.RocketComponent;
  */
 public class Engine extends RocketComponent
 {
-    public Engine(Image sprite, float force, float mass, float handle, int armor, int hull) {
-		super(sprite, force, mass, handle, armor, hull);
+	public Engine(Image sprite, float force, float mass, float handle, int armor, int hull, float fuel)
+	{
+		super(sprite, force, mass, handle, armor, hull, fuel);
 	}
 }

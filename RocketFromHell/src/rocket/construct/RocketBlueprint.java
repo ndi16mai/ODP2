@@ -2,6 +2,7 @@ package rocket.construct;
 
 import rocket.RocketComponent;
 import rocket.components.Engine;
+import rocket.components.FuelTank;
 import rocket.components.Hull;
 import rocket.components.Wings;
 import rocket.construct.RocketBuilderVisitor;
@@ -16,11 +17,12 @@ public class RocketBlueprint
 {
     private List<RocketComponent> components = new LinkedList<>();
 
-    public RocketBlueprint(Hull hull, Wings wings, Engine engine)
+    public RocketBlueprint(Hull hull, Wings wings, Engine engine, FuelTank fuelTank)
     {
         components.add(hull);
         components.add(wings);
         components.add(engine);
+        components.add(fuelTank);
 
     }
 

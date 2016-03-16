@@ -24,6 +24,7 @@ public class RocketBuilder
 
     public Rocket getRocket()
     {
+        rocket.setHealth(rocket.getSpecs().getHull());
         return rocket;
     }
 }

@@ -8,8 +8,8 @@ import rocket.components.Hull;
  */
 public enum HullFactory
 {
-    HULL(()->{return new Hull(Assets.hull, 0,100,0,100,1);}),
-    BLUE_WINGS(()->{return new Hull(Assets.blueHull, 0,100,0,200,5);});
+    HULL(()->{return new Hull(Assets.hull, 0,100,0,100,1,0);}),
+    BLUE_WINGS(()->{return new Hull(Assets.blueHull, 0,100,0,200,5,0);});
     private HullProvider hullProvider;
 
     HullFactory(HullProvider componentProvider)

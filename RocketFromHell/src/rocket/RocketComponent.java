@@ -6,12 +6,12 @@ import rocket.construct.RocketBuilderVisitor;
 public abstract class RocketComponent
 {
 	protected Image sprite;
-	protected float force, mass, handle;
+	protected float force, mass, handle, fuel;
 	protected int armor, hull;
 	
     
 
-    public RocketComponent(Image sprite, float force, float mass, float handle, int armor, int hull) {
+    public RocketComponent(Image sprite, float force, float mass, float handle, int armor, int hull, float fuel) {
 		super();
 		this.sprite = sprite;
 		this.force = force;
@@ -19,6 +19,7 @@ public abstract class RocketComponent
 		this.handle = handle;
 		this.armor = armor;
 		this.hull = hull;
+		this.fuel = fuel;
 	}
 
 
@@ -57,7 +58,10 @@ public abstract class RocketComponent
 		return hull;
 	}
 
-
+	public float getFuel()
+	{
+		return fuel;
+	}
 
 	public void accept(RocketBuilderVisitor visitor)
     {

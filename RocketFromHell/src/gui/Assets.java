@@ -13,10 +13,12 @@ import java.io.IOException;
  */
 public class Assets
 {
-    public static Image hull, engine, wings, blueHull, blueEngine, blueWings;
+    public static Image hull, engine, wings, blueHull, blueEngine, blueWings, imp, hell;
 
     public static void load()
     {
+        imp = loadImage("assets/imp.png");
+        hell = loadImage("assets/hell.jpg");
         hull = loadImage("assets/Hull.png");
         engine = loadImage("assets/Engine.png");
         wings = loadImage("assets/Wings.png");

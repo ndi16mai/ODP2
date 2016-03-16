@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 public class RocketSpecs
 {
     private float force, mass, handle;
-    private int armor, hull;
+    private int armor, hull, fuel;
 
     public void addComponent(RocketComponent rocketComponent)
     {
@@ -17,6 +17,7 @@ public class RocketSpecs
         handle += rocketComponent.getHandle();
         armor += rocketComponent.getArmor();
         hull += rocketComponent.getHull();
+        fuel += rocketComponent.getFuel();
     }
 
     public float getForce()
@@ -42,5 +43,9 @@ public class RocketSpecs
     public int getHull()
     {
         return hull;
+    }
+
+    public int getFuel(){
+        return fuel;
     }
 }
