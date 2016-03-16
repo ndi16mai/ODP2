@@ -9,44 +9,8 @@ import rocket.RocketComponent;
  */
 public class Hull extends RocketComponent
 {
-    @Override
-    public Image getSprite()
+    public Hull(Image sprite, float force, float mass, float handle, int armor, int hull, float fuel)
     {
-        return Assets.hull;
-    }
-
-    @Override
-    public float getForce()
-    {
-        return 0;
-    }
-
-    @Override
-    public float getMass()
-    {
-        return 200;
-    }
-
-    @Override
-    public float getHandle()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getArmor()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getHull()
-    {
-        return 100;
-    }
-
-    @Override
-    public int getFuel() {
-        return 0;
+        super(sprite, force, mass, handle, armor, hull, fuel);
     }
 }

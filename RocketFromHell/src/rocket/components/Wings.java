@@ -9,44 +9,8 @@ import rocket.RocketComponent;
  */
 public class Wings extends RocketComponent
 {
-    @Override
-    public Image getSprite()
+    public Wings(Image sprite, float force, float mass, float handle, int armor, int hull, float fuel)
     {
-        return Assets.wings;
-    }
-
-    @Override
-    public float getForce()
-    {
-        return 0;
-    }
-
-    @Override
-    public float getMass()
-    {
-        return 5;
-    }
-
-    @Override
-    public float getHandle()
-    {
-        return 10;
-    }
-
-    @Override
-    public int getArmor()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getHull()
-    {
-        return 0;
-    }
-
-    @Override
-    public int getFuel() {
-        return 0;
+        super(sprite, force, mass, handle, armor, hull, fuel);
     }
 }

@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class Assets
 {
-    public static Image hull, engine, wings, hell, imp;
+    public static Image hull, engine, wings, blueHull, blueEngine, blueWings, imp, hell;
 
     public static void load()
     {
@@ -22,6 +22,9 @@ public class Assets
         hull = loadImage("assets/Hull.png");
         engine = loadImage("assets/Engine.png");
         wings = loadImage("assets/Wings.png");
+        blueHull = loadImage("assets/BlueHull.png");
+        blueEngine = loadImage("assets/BlueEngine.png");
+        blueWings = loadImage("assets/BlueWings.png");
     }
 
     private static Image loadImage(String path)
