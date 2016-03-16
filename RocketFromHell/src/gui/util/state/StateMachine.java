@@ -8,4 +8,14 @@ import javafx.scene.Scene;
 public class StateMachine
 {
     private Scene scene;
+
+    public StateMachine(Scene scene)
+    {
+        this.scene = scene;
+    }
+
+    public void setState(State state)
+    {
+        state.updateScene(scene);
+    }
 }
