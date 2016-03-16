@@ -12,7 +12,7 @@ import rocket.RocketComponent;
  */
 public class RocketComponentView <T extends RocketComponent> extends ImageView
 {
-	private RocketComponentSelectHandler handler;
+	private RocketComponentSelectHandler<T> handler;
     private int imageSize = 50;
     private T component;
 
@@ -34,7 +34,6 @@ public class RocketComponentView <T extends RocketComponent> extends ImageView
     public void select()
     {
     	setEffect( new DropShadow( 30, Color.DARKRED ) );
-    	System.out.println("selecet");
     }
     
     public void deselect()
@@ -45,6 +44,12 @@ public class RocketComponentView <T extends RocketComponent> extends ImageView
 	public void setHandler(RocketComponentSelectHandler handler) {
 		this.handler = handler;
 	}
+
+	public T getComponent() {
+		return component;
+	}
+	
+	
     
     
 

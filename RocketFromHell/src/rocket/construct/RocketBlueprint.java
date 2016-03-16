@@ -14,39 +14,18 @@ import java.util.List;
  */
 public class RocketBlueprint
 {
-    private Hull hull;
-    private Wings wings;
-    private Engine engine;
+    private List<RocketComponent> components = new LinkedList<>();
 
     public RocketBlueprint(Hull hull, Wings wings, Engine engine)
     {
-        this.hull = hull;
-        this.wings = wings;
-        this.engine = engine;
-    }
+        components.add(hull);
+        components.add(wings);
+        components.add(engine);
 
-    public void setHull(Hull hull)
-    {
-        this.hull = hull;
-    }
-
-    public void setWings(Wings wings)
-    {
-        this.wings = wings;
-    }
-
-    public void setEngine(Engine engine)
-    {
-        this.engine = engine;
     }
 
     public List<RocketComponent> getComponents()
     {
-        List<RocketComponent> components = new LinkedList<>();
-
-        components.add(hull);
-        components.add(wings);
-        components.add(engine);
         return components;
     }
 }
