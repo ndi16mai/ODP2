@@ -28,16 +28,16 @@ public class RocketGame extends Game {
 
     @Override
     public void render(GraphicsContext gc) {
-        gc.translate(camera.getX(), camera.getY());
+//        gc.translate(camera.getX(), camera.getY());
         gc.drawImage(Assets.hell, 0, 0);
         rocket.draw(gc);
         pawns.forEach(pawn -> pawn.draw(gc));
-        gc.translate(-camera.getX(), -camera.getY());
+//        gc.translate(-camera.getX(), -camera.getY());
     }
 
     @Override
     public void update() {
-        camera.tick();
+//        camera.tick();
         if(inputHandler.isPressed("LEFT"))
         {
             rocket.rotated(-1);
@@ -46,6 +46,8 @@ public class RocketGame extends Game {
         {
             rocket.rotated(1);
         }
+
+        rocket.update();
         pawns.forEach(pawn -> {
             pawn.update();
             pawn.isColliding(rocket);
@@ -53,6 +55,7 @@ public class RocketGame extends Game {
                 pawns.remove(pawn);
             }
         });
+
 
     }
 }

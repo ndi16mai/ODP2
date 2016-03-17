@@ -23,4 +23,17 @@ public class Vector2 {
     {
         return new Vector2(x + moveDelta.getX(), y + moveDelta.getY());
     }
+
+    public Vector2 rotate(float angle)
+    {
+        float x = (float) (this.x * Math.cos(angle) -  this.y * Math.sin(angle));
+        float y = (float) (this.x * Math.sin(angle) +  this.y * Math.cos(angle));
+        
+        return new Vector2(x,y);
+    }
+
+    public String toString()
+    {
+        return "(" + x + "," + y + ")";
+    }
 }

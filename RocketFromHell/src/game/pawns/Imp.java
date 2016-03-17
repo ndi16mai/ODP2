@@ -13,7 +13,7 @@ public class Imp extends Pawn {
 
     public Imp(Vector2 pos) {
         super(Assets.imp, pos);
-        moveStrategy = new FallingStrategy();
+//        moveStrategy = new FallingStrategy();
         collisionStrategy = new DamageCollision(5);
     }
 

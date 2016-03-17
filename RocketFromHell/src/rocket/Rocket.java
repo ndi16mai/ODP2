@@ -1,6 +1,8 @@
 package rocket;
 
 import game.pawns.Pawn;
+import game.pawns.strategy.move.MoveStrategy;
+import game.pawns.strategy.move.RocketMoveStrategy;
 import javafx.scene.image.Image;
 import rocket.util.Vector2;
 
@@ -15,6 +17,7 @@ public class Rocket extends Pawn
     public Rocket() {
         super(null, new Vector2(200,300));
         height = 200;
+        moveStrategy = new RocketMoveStrategy(this);
     }
 
     public void setSprite(Image sprite)
@@ -40,6 +43,16 @@ public class Rocket extends Pawn
     {
         health -= damage;
     }
+
+    public Vector2 getVelocity()
+    {
+//        float angle = (float) Math.toRadians(this.angle);
+        Vector2 force = new Vector2(0, -specs.getForce()/100);
+        force.rotate(angle);
+        System.out.println("force = " + force);
+        return force;
+    }
+
 
 
 
