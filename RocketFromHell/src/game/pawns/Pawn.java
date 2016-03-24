@@ -16,7 +16,7 @@ import rocket.util.Vector2;
 public abstract class Pawn {
 
     protected Image image;
-    protected Vector2 pos;
+    protected Vector2 pos, offset = new Vector2(0,0);
     protected MoveStrategy moveStrategy;
     protected int width = 100, height = 100;
     protected boolean alive = true;
@@ -28,11 +28,11 @@ public abstract class Pawn {
         this.pos = pos;
     }
 
-    public void draw(GraphicsContext gc)
+    public void draw(GraphicsContext gc, Vector2 translate)
     {
         gc.save();
-        rotate(gc);
-        gc.drawImage(image, pos.getX(), pos.getY(), width, height);
+        rotate(gc, pos.getX(), pos.getY());
+        gc.drawImage(image, pos.getX() + translate.getX(), pos.getY() + translate.getY(), width, height);
         gc.restore();
 
     }
@@ -57,7 +57,7 @@ public abstract class Pawn {
     {
         if (collisionStrategy != null) {
             Rectangle rectangle = new Rectangle(pos.getX(), pos.getY(), width, height);
-            Rectangle rocketRectangle = new Rectangle(rocket.pos.getX(), rocket.pos.getY(), rocket.width, rocket.height);
+            Rectangle rocketRectangle = new Rectangle(rocket.pos.getX() + rocket.offset.getX(), rocket.pos.getY() - rocket.offset.getY() - 100, rocket.width, rocket.height);
 
             if (rectangle.intersects(rocketRectangle.getLayoutBounds())) {
                 collisionStrategy.collide(rocket);
@@ -71,10 +71,16 @@ public abstract class Pawn {
         this.angle += angle;
     }
 
-    private void rotate(GraphicsContext gc) {
-        float px = (float) (pos.getX() + image.getWidth()/2);
-        float py = (float) (pos.getY() + image.getHeight()/2);
+    protected void rotate(GraphicsContext gc, float x, float y) {
+        float px = (float) (x + image.getWidth()/2);
+        float py = (float) (y + image.getHeight()/2);
         Rotate rotate = new Rotate(angle, px, py);
         gc.setTransform(rotate.getMxx(), rotate.getMyx(), rotate.getMxy(), rotate.getMyy(), rotate.getTx(), rotate.getTy());
     }
+
+	public Vector2 getPos() {
+		return pos;
+	}
+    
+    
 }

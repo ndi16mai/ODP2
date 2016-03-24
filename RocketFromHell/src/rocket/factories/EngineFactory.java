@@ -9,8 +9,8 @@ import rocket.components.Hull;
  */
 public enum EngineFactory
 {
-    ENGINE(()->{return new Engine(Assets.engine, 100,50,0,0,0,0);}),
-    BLUE_ENGINE(()->{return new Engine(Assets.blueEngine, 200,50,0,0,0,0);});
+    ENGINE(()->{return new Engine(Assets.engine, 200,50,0,0,0,0);}),
+    BLUE_ENGINE(()->{return new Engine(Assets.blueEngine, 400,50,0,0,0,0);});
     private HullProvider hullProvider;
 
     EngineFactory(HullProvider componentProvider)

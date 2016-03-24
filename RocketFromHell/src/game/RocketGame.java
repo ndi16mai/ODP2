@@ -21,18 +21,23 @@ public class RocketGame extends Game {
 
     public RocketGame() {
         super();
-        pawns.add(new Imp(new Vector2(200,0)));
+
+        for(int i = 0; i < 500; i += 100)
+        {
+            pawns.add(new Imp(new Vector2( i -200,-600)));
+
+        }
+
 
         this.camera = new Camera(0,0);
     }
 
     @Override
     public void render(GraphicsContext gc) {
-//        gc.translate(camera.getX(), camera.getY());
-        gc.drawImage(Assets.hell, 0, 0);
+
+        gc.drawImage(Assets.hell, rocket.getPos().getX() - 1000, rocket.getPos().getY() - 1000);
         rocket.draw(gc);
-        pawns.forEach(pawn -> pawn.draw(gc));
-//        gc.translate(-camera.getX(), -camera.getY());
+        pawns.forEach(pawn -> pawn.draw(gc, rocket.getPos()));
     }
 
     @Override

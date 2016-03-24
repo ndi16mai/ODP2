@@ -26,10 +26,17 @@ public class Vector2 {
 
     public Vector2 rotate(float angle)
     {
+    	angle = (float) Math.toRadians(angle);
+    	
         float x = (float) (this.x * Math.cos(angle) -  this.y * Math.sin(angle));
         float y = (float) (this.x * Math.sin(angle) +  this.y * Math.cos(angle));
         
         return new Vector2(x,y);
+    }
+    
+    public Vector2 flip()
+    {
+    	return new Vector2(-x, -y);
     }
 
     public String toString()
