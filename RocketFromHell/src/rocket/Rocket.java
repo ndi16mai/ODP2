@@ -35,9 +35,6 @@ public class Rocket extends Pawn
         rotate(gc, offset.getX(), offset.getY());
         gc.drawImage(image, offset.getX(), offset.getY(), width, height);
         gc.restore();
-
-        gc.setStroke(Color.GREEN);
-        gc.strokeRect(offset.getX(),offset.getY(), width, height);
     }
     
    public void setSprite(Image sprite)

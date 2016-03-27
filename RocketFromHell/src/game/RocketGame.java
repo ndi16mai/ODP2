@@ -1,7 +1,6 @@
 package game;
 
 import static gui.util.state.GameStateMachine.*;
-import game.levels.Camera;
 import gui.Assets;
 import game.pawns.Imp;
 import game.pawns.Pawn;
@@ -17,7 +16,6 @@ import java.util.List;
 public class RocketGame extends Game {
 
     private List<Pawn> pawns = new LinkedList<>();
-    private Camera camera;
 
     public RocketGame() {
         super();
@@ -29,7 +27,6 @@ public class RocketGame extends Game {
         }
 
 
-        this.camera = new Camera(0,0);
     }
 
     @Override
